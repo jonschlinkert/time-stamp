@@ -13,6 +13,9 @@ npm i time-stamp --save
 ```js
 var timestamp = require('time-stamp');
 
+timestamp();
+//=> '2015:04:01'
+
 timestamp('YYYY:MM:DD');
 //=> '2015:04:01'
 
@@ -21,6 +24,9 @@ timestamp('[YYYY:MM:DD]');
 
 timestamp('YYYY/MM/DD');
 //=> '2015/04/01'
+
+timestamp('YYYY:MM');
+//=> '2015:04'
 
 timestamp('YYYY');
 //=> '2015'

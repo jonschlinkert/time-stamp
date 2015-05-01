@@ -54,6 +54,7 @@ timestamp('ms');
 ## Related projects
 
 * [days](https://github.com/jonschlinkert/days): Days of the week.
+* [iso-week](https://github.com/jonschlinkert/iso-week): Get the ISO week of the year.
 * [month](https://github.com/jonschlinkert/month): Get the name or number of the current month or any month of the year.
 * [months](https://github.com/jonschlinkert/months): Months of the year.
 * [o-clock](https://github.com/jonschlinkert/o-clock): Simple utility for displaying the time in 12-hour clock format.

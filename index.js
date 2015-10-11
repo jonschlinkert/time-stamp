@@ -7,12 +7,6 @@
 
 'use strict';
 
-var pad = require('pad-left');
-
-/**
- * Expose `timestamp`
- */
-
 /**
  * Parse the given pattern and return a formatted
  * timestamp.
@@ -29,24 +23,24 @@ module.exports = function timestamp(pattern, date) {
   }
   date = date || new Date();
   return pattern.replace(/([YMDHms]{2,4})(:\/)?/g, function (_, key, sep) {
-    var time = method(key);
-    if (!time) return _;
+    var increment = method(key);
+    if (!increment) return _;
+    sep = sep || '';
 
-    var res = date[time]().toString();
-    var diff = key.length - res.length;
-    return pad(res, diff, 0) + (sep || '');
+    var res = '00' + date[increment[0]]().toString();
+    return res.slice(-increment[1]) + sep;
   });
 };
 
 function method(key) {
   return ({
-   YYYY: 'getFullYear',
-   YY: 'getFullYear',
-   MM: 'getMonth',
-   DD: 'getDate',
-   HH: 'getHours',
-   mm: 'getMinutes',
-   ss: 'getSeconds',
-   ms: 'getMilliseconds'
+   YYYY: ['getFullYear', 4],
+   YY: ['getFullYear', 2],
+   MM: ['getMonth', 2],
+   DD: ['getDate', 2],
+   HH: ['getHours', 2],
+   mm: ['getMinutes', 2],
+   ss: ['getSeconds', 2],
+   ms: ['getMilliseconds', 3]
   })[key];
 }

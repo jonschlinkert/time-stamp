@@ -42,6 +42,6 @@ describe('timestamp', function () {
   });
 
   it('should return miliseconds:', function () {
-    timestamp('ms').should.match(/^\d{3}$$/);
+    timestamp('ms').should.match(/^\d{3}$/);
   });
 });

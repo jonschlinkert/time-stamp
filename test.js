@@ -44,4 +44,14 @@ describe('timestamp', function () {
   it('should return miliseconds:', function () {
     timestamp('ms').should.match(/^\d{3}$/);
   });
+
+  it('should increment zero-based month:', function () {
+    var expected = String(new Date().getMonth() + 1);
+    timestamp('MM').should.equal(expected);
+  });
+
+  it('should not increment one-based methods:', function () {
+    var expected = String(new Date().getFullYear());
+    timestamp('YYYY').should.equal(expected);
+  });
 });

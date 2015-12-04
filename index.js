@@ -27,7 +27,7 @@ module.exports = function timestamp(pattern, date) {
     if (!increment) return _;
     sep = sep || '';
 
-    var res = '00' + date[increment[0]]().toString();
+    var res = '00' + String(date[increment[0]]() + (increment[2] || 0));
     return res.slice(-increment[1]) + sep;
   });
 };
@@ -36,7 +36,8 @@ function method(key) {
   return ({
    YYYY: ['getFullYear', 4],
    YY: ['getFullYear', 2],
-   MM: ['getMonth', 2],
+   // getMonth is zero-based, thus the extra increment field
+   MM: ['getMonth', 2, 1],
    DD: ['getDate', 2],
    HH: ['getHours', 2],
    mm: ['getMinutes', 2],

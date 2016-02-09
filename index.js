@@ -22,7 +22,7 @@ module.exports = function timestamp(pattern, date) {
     pattern = 'YYYY:MM:DD';
   }
   date = date || new Date();
-  return pattern.replace(/([YMDHms]{2,4})(:\/)?/g, function (_, key, sep) {
+  return pattern.replace(/([YMDHms]{2,4})(:\/)?/g, function(_, key, sep) {
     var increment = method(key);
     if (!increment) return _;
     sep = sep || '';

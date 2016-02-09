@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*"
+    "pad-left": "^2.0.1"
   },
   "keywords": [
     "console",
@@ -48,6 +48,7 @@
         "weekday",
         "year"
       ]
-    }
+    },
+    "layout": "default"
   }
 }

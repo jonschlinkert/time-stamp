@@ -7,51 +7,51 @@
 
 'use strict';
 
-/* deps:mocha */
+require('mocha');
 var assert = require('assert');
-var should = require('should');
+var pad = require('pad-left');
 var timestamp = require('./');
 
-describe('timestamp', function () {
-  it('should return the default timestamp:', function () {
-    timestamp().should.match(/^\d{4}:\d{2}:\d{2}$/);
+describe('timestamp', function() {
+  it('should return the default timestamp:', function() {
+    assert(/^\d{4}:\d{2}:\d{2}$/, timestamp());
   });
 
-  it('should return the year:', function () {
-    timestamp('YYYY').should.match(/^\d{4}$/);
+  it('should return the year:', function() {
+    assert(/^\d{4}$/.test(timestamp('YYYY')));
   });
 
-  it('should return the month:', function () {
-    timestamp('MM').should.match(/^\d{2}$/);
+  it('should return the month:', function() {
+    assert(/^\d{2}$/.test(timestamp('MM')));
   });
 
-  it('should return the day:', function () {
-    timestamp('DD').should.match(/^\d{2}$/);
+  it('should return the day:', function() {
+    assert(/^\d{2}$/.test(timestamp('DD')));
   });
 
-  it('should return hours:', function () {
-    timestamp('HH').should.match(/^\d{2}$/);
+  it('should return hours:', function() {
+    assert(/^\d{2}$/.test(timestamp('HH')));
   });
 
-  it('should return minutes:', function () {
-    timestamp('mm').should.match(/^\d{2}$/);
+  it('should return minutes:', function() {
+    assert(/^\d{2}$/.test(timestamp('mm')));
   });
 
-  it('should return seconds:', function () {
-    timestamp('ss').should.match(/^\d{2}$/);
+  it('should return seconds:', function() {
+    assert(/^\d{2}$/.test(timestamp('ss')));
   });
 
-  it('should return miliseconds:', function () {
-    timestamp('ms').should.match(/^\d{3}$/);
+  it('should return miliseconds:', function() {
+    assert(/^\d{3}$/.test(timestamp('ms')));
   });
 
-  it('should increment zero-based month:', function () {
+  it('should increment zero-based month:', function() {
     var expected = String(new Date().getMonth() + 1);
-    timestamp('MM').should.equal(expected);
+    assert.equal(timestamp('MM'), pad(expected, 2, '0'));
   });
 
-  it('should not increment one-based methods:', function () {
+  it('should not increment one-based methods:', function() {
     var expected = String(new Date().getFullYear());
-    timestamp('YYYY').should.equal(expected);
+    assert.equal(timestamp('YYYY'), pad(expected, 4, '0'));
   });
 });

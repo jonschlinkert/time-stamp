@@ -39,7 +39,7 @@ timestamp('MM');
 timestamp('DD');
 //=> '01'
 
-timestamp('hh');
+timestamp('HH');
 //=> '01'
 
 timestamp('mm');

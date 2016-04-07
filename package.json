@@ -20,8 +20,9 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "mocha": "*",
-    "pad-left": "^2.0.1"
+    "gulp-format-md": "^0.1.7",
+    "mocha": "^2.4.5",
+    "pad-left": "^2.0.3"
   },
   "keywords": [
     "console",
@@ -36,6 +37,15 @@
     "time-stamp"
   ],
   "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
     "related": {
       "list": [
         "days",
@@ -49,6 +59,11 @@
         "year"
       ]
     },
-    "layout": "default"
+    "reflinks": [
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }

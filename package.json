@@ -4,6 +4,11 @@
   "version": "1.0.1",
   "homepage": "https://github.com/jonschlinkert/time-stamp",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Daniel Stockman (http://evocateur.org)",
+    "Drew (https://github.com/mendenhallmagic)",
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)"
+  ],
   "repository": "jonschlinkert/time-stamp",
   "bugs": {
     "url": "https://github.com/jonschlinkert/time-stamp/issues"

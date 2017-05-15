@@ -51,6 +51,9 @@
     "plugins": [
       "gulp-format-md"
     ],
+    "helpers": {
+      "timestamp": "./index.js"
+    },
     "related": {
       "list": [
         "days",

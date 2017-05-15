@@ -1,7 +1,7 @@
 /*!
  * time-stamp <https://github.com/jonschlinkert/time-stamp>
  *
- * Copyright (c) 2015 Jon Schlinkert.
+ * Copyright (c) 2015-2017 Jon Schlinkert.
  * Licensed under the MIT license.
  */
 
@@ -14,7 +14,20 @@ var timestamp = require('./');
 
 describe('timestamp', function() {
   it('should return the default timestamp:', function() {
-    assert(/^\d{4}:\d{2}:\d{2}$/, timestamp());
+    assert(/^\d{4}:\d{2}:\d{2}$/.test(timestamp()));
+  });
+
+  it('should work with delimiters', function() {
+    assert(/^\[\d{4}\]/.test(timestamp('[YYYY]')));
+    assert(/^\[\d{4}\d{2}\]/.test(timestamp('[YYYYMM]')));
+    assert(/^\[\d{4}:\d{2}\]/.test(timestamp('[YYYY:MM]')));
+  });
+
+  it('should work with no separators', function() {
+    assert(/^\d{4}\d{2}$/.test(timestamp('YYYYMM')));
+    assert(/^\d{4}\d{2}\d{2}$/.test(timestamp('YYYYMMDD')));
+    assert(/^\d{4}\d{2}\d{2}\d{2}$/.test(timestamp('YYYYMMDDss')));
+    assert(/^\d{4}\d{2}\d{2}$/.test(timestamp('YYYYMMss')));
   });
 
   it('should return the year:', function() {

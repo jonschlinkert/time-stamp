@@ -14,7 +14,7 @@ var timestamp = require('./');
 
 describe('timestamp', function() {
   it('should return the default timestamp:', function() {
-    assert(/^\d{4}:\d{2}:\d{2}$/.test(timestamp()));
+    assert(/^\d{4}-\d{2}-\d{2}$/.test(timestamp()));
   });
 
   it('should work with delimiters', function() {

@@ -16,7 +16,7 @@ $ npm install --save time-stamp
 var timestamp = require('time-stamp');
 
 timestamp();
-//=> 2017:05:14
+//=> 2017-05-14
 
 timestamp('YYYYMMDD');
 //=> 20170514

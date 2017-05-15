@@ -1,7 +1,7 @@
 {
   "name": "time-stamp",
   "description": "Get a formatted timestamp.",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/jonschlinkert/time-stamp",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "contributors": [

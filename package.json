@@ -25,9 +25,9 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "gulp-format-md": "^0.1.7",
-    "mocha": "^2.4.5",
-    "pad-left": "^2.0.3"
+    "gulp-format-md": "^0.1.12",
+    "mocha": "^3.4.1",
+    "pad-left": "^2.1.0"
   },
   "keywords": [
     "console",

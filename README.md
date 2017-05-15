@@ -22,10 +22,10 @@ timestamp('YYYYMMDD');
 //=> 20170514
 
 timestamp('YYYYMMDD:ss');
-//=> 20170514:42
+//=> 20170514:26
 
 timestamp('YYYY/MM/DD:mm:ss');
-//=> 2017/05/14:46:42
+//=> 2017/05/14:52:26
 
 timestamp('YYYY:MM:DD');
 //=> 2017:05:14
@@ -52,13 +52,13 @@ timestamp('HH');
 //=> 20
 
 timestamp('mm');
-//=> 46
+//=> 52
 
 timestamp('ss');
-//=> 42
+//=> 26
 
 timestamp('ms');
-//=> 353
+//=> 481
 ```
 
 **Valid patterns**
@@ -75,15 +75,15 @@ timestamp('ms');
 
 ### Related projects
 
-* [days](https://www.npmjs.com/package/days): Days of the week. | [homepage](https://github.com/jonschlinkert/days)
-* [iso-week](https://www.npmjs.com/package/iso-week): Get the ISO week of the year. | [homepage](https://github.com/jonschlinkert/iso-week)
-* [month](https://www.npmjs.com/package/month): Get the name or number of the current month or any month of the year. | [homepage](https://github.com/datetime/month)
-* [months](https://www.npmjs.com/package/months): Months of the year. | [homepage](https://github.com/jonschlinkert/months)
-* [o-clock](https://www.npmjs.com/package/o-clock): Simple javascript utility for displaying the time in 12-hour clock format. | [homepage](https://github.com/jonschlinkert/o-clock)
-* [seconds](https://www.npmjs.com/package/seconds): Get the number of seconds for a minute, hour, day and week. | [homepage](https://github.com/jonschlinkert/seconds)
-* [week](https://www.npmjs.com/package/week): Get the current week number. | [homepage](https://github.com/datetime/week)
-* [weekday](https://www.npmjs.com/package/weekday): Get the name and number of the current weekday. Or get the name of the… [more](https://github.com/datetime/weekday) | [homepage](https://github.com/datetime/weekday)
-* [year](https://www.npmjs.com/package/year): Simple utility to get the current year with 2 or 4 digits. | [homepage](https://github.com/jonschlinkert/year)
+* [days](https://www.npmjs.com/package/days): Days of the week. | [homepage](https://github.com/jonschlinkert/days "Days of the week.")
+* [iso-week](https://www.npmjs.com/package/iso-week): Get the ISO week of the year. | [homepage](https://github.com/jonschlinkert/iso-week "Get the ISO week of the year.")
+* [month](https://www.npmjs.com/package/month): Get the name or number of the current month or any month of the year. | [homepage](https://github.com/datetime/month "Get the name or number of the current month or any month of the year.")
+* [months](https://www.npmjs.com/package/months): Months of the year. | [homepage](https://github.com/jonschlinkert/months "Months of the year.")
+* [o-clock](https://www.npmjs.com/package/o-clock): Simple javascript utility for displaying the time in 12-hour clock format. | [homepage](https://github.com/jonschlinkert/o-clock "Simple javascript utility for displaying the time in 12-hour clock format.")
+* [seconds](https://www.npmjs.com/package/seconds): Get the number of seconds for a minute, hour, day and week. | [homepage](https://github.com/jonschlinkert/seconds "Get the number of seconds for a minute, hour, day and week.")
+* [week](https://www.npmjs.com/package/week): Get the current week number. | [homepage](https://github.com/datetime/week "Get the current week number.")
+* [weekday](https://www.npmjs.com/package/weekday): Get the name and number of the current weekday. Or get the name of the… [more](https://github.com/datetime/weekday) | [homepage](https://github.com/datetime/weekday "Get the name and number of the current weekday. Or get the name of the weekday for a given number.")
+* [year](https://www.npmjs.com/package/year): Simple utility to get the current year with 2 or 4 digits. | [homepage](https://github.com/jonschlinkert/year "Simple utility to get the current year with 2 or 4 digits.")
 
 ### Contributing
 
@@ -91,11 +91,11 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 
 ### Contributors
 
-| **Commits** | **Contributor** |  
-| --- | --- |  
-| 21 | [jonschlinkert](https://github.com/jonschlinkert) |  
-| 1  | [evocateur](https://github.com/evocateur) |  
-| 1  | [mendenhallmagic](https://github.com/mendenhallmagic) |
+| **Commits** | **Contributor** | 
+| --- | --- |
+| 21 | [jonschlinkert](https://github.com/jonschlinkert) |
+| 1 | [evocateur](https://github.com/evocateur) |
+| 1 | [mendenhallmagic](https://github.com/mendenhallmagic) |
 
 ### Building docs
 

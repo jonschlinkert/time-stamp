@@ -1,7 +1,7 @@
 /*!
  * time-stamp <https://github.com/jonschlinkert/time-stamp>
  *
- * Copyright (c) 2015-2017, Jon Schlinkert
+ * Copyright (c) 2015-2017, Jon Schlinkert.
  * Released under the MIT License.
  */
 
@@ -43,14 +43,14 @@ module.exports = function(pattern, date) {
 
 function method(key) {
   return ({
-   YYYY: ['getFullYear', 4],
-   YY: ['getFullYear', 2],
-   // getMonth is zero-based, thus the extra increment field
-   MM: ['getMonth', 2, 1],
-   DD: ['getDate', 2],
-   HH: ['getHours', 2],
-   mm: ['getMinutes', 2],
-   ss: ['getSeconds', 2],
-   ms: ['getMilliseconds', 3]
+    YYYY: ['getFullYear', 4],
+    YY: ['getFullYear', 2],
+    // getMonth is zero-based, thus the extra increment field
+    MM: ['getMonth', 2, 1],
+    DD: ['getDate', 2],
+    HH: ['getHours', 2],
+    mm: ['getMinutes', 2],
+    ss: ['getSeconds', 2],
+    ms: ['getMilliseconds', 3]
   })[key];
 }

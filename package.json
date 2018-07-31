@@ -7,7 +7,8 @@
   "contributors": [
     "Daniel Stockman (http://evocateur.org)",
     "Drew (https://github.com/mendenhallmagic)",
-    "Jon Schlinkert (http://twitter.com/jonschlinkert)"
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
+    "leesei (https://leesei.github.io)"
   ],
   "repository": "jonschlinkert/time-stamp",
   "bugs": {
@@ -15,7 +16,8 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "main": "index.js",
   "types": "index.d.ts",

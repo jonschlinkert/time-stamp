@@ -25,48 +25,78 @@ var timestamp = require('time-stamp');
 
 timestamp();
 //=> 2018-08-22
+timestamp.utc();
+//=> 2018-08-22
 
 timestamp('YYYYMMDD');
 //=> 20180822
+timestamp.utc('YYYYMMDD');
+//=> 20180822
 
 timestamp('YYYYMMDD:ss');
-//=> 20180822:48
+//=> 20180822:39
+timestamp.utc('YYYYMMDD:ss');
+//=> 20180822:39
 
 timestamp('YYYY/MM/DD:mm:ss');
-//=> 2018/08/22:25:48
+//=> 2018/08/22:16:39
+timestamp.utc('YYYY/MM/DD:mm:ss');
+//=> 2018/08/22:16:39
 
 timestamp('YYYY:MM:DD');
+//=> 2018:08:22
+timestamp.utc('YYYY:MM:DD');
 //=> 2018:08:22
 
 timestamp('[YYYY:MM:DD]');
 //=> [2018:08:22]
+timestamp.utc('[YYYY:MM:DD]');
+//=> [2018:08:22]
 
 timestamp('YYYY/MM/DD');
+//=> 2018/08/22
+timestamp.utc('YYYY/MM/DD');
 //=> 2018/08/22
 
 timestamp('YYYY:MM');
 //=> 2018:08
+timestamp.utc('YYYY:MM');
+//=> 2018:08
 
 timestamp('YYYY');
+//=> 2018
+timestamp.utc('YYYY');
 //=> 2018
 
 timestamp('MM');
 //=> 08
+timestamp.utc('MM');
+//=> 08
 
 timestamp('DD');
 //=> 22
+timestamp.utc('DD');
+//=> 22
 
 timestamp('HH');
-//=> 10
+//=> 11
+timestamp.utc('HH');
+//=> 15
 
 timestamp('mm');
-//=> 25
+//=> 16
+timestamp.utc('mm');
+//=> 16
 
 timestamp('ss');
-//=> 48
+//=> 39
+timestamp.utc('ss');
+//=> 39
 
 timestamp('ms');
-//=> 957
+//=> 142
+timestamp.utc('ms');
+//=> 142
 ```
 
 **Valid patterns**
@@ -131,9 +161,10 @@ You might also be interested in these projects:
 | **Commits** | **Contributor** |  
 | --- | --- |  
 | 31 | [jonschlinkert](https://github.com/jonschlinkert) |  
-| 3  | [doowb](https://github.com/doowb) |  
+| 4  | [doowb](https://github.com/doowb) |  
 | 1  | [evocateur](https://github.com/evocateur) |  
 | 1  | [mendenhallmagic](https://github.com/mendenhallmagic) |  
+| 1  | [mvanroon](https://github.com/mvanroon) |  
 | 1  | [leesei](https://github.com/leesei) |  
 | 1  | [sleagon](https://github.com/sleagon) |  
 

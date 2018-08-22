@@ -30,7 +30,8 @@
   "devDependencies": {
     "gulp-format-md": "^0.1.12",
     "mocha": "^3.4.1",
-    "pad-left": "^2.1.0"
+    "pad-left": "^2.1.0",
+    "verb-generate-readme": "^0.8.0"
   },
   "keywords": [
     "console",
@@ -54,9 +55,6 @@
     "plugins": [
       "gulp-format-md"
     ],
-    "helpers": {
-      "timestamp": "./index.js"
-    },
     "related": {
       "list": [
         "days",

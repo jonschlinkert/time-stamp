@@ -28,10 +28,9 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "gulp-format-md": "^0.1.12",
-    "mocha": "^3.4.1",
-    "pad-left": "^2.1.0",
-    "verb-generate-readme": "^0.8.0"
+    "gulp-format-md": "^1.0.0",
+    "mocha": "^5.2.0",
+    "pad-left": "^2.1.0"
   },
   "keywords": [
     "console",
@@ -47,10 +46,13 @@
   ],
   "verb": {
     "run": true,
-    "toc": false,
+    "toc": true,
     "layout": "default",
     "tasks": [
       "readme"
+    ],
+    "helpers": [
+      "./helpers.js"
     ],
     "plugins": [
       "gulp-format-md"
@@ -68,9 +70,6 @@
         "year"
       ]
     },
-    "reflinks": [
-      "verb"
-    ],
     "lint": {
       "reflinks": true
     }

@@ -1,10 +1,3 @@
-/*!
- * time-stamp <https://github.com/jonschlinkert/time-stamp>
- *
- * Copyright (c) 2015-2017 Jon Schlinkert.
- * Licensed under the MIT license.
- */
-
 'use strict';
 
 require('mocha');

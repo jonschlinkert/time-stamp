@@ -70,8 +70,8 @@ describe('timestamp', function() {
   });
 
   it('should return the 2 digit year for a given date', function() {
-    const date = new Date(2019, 0);
-    const expectedYear = "19";
+    var date = new Date(2019, 0);
+    var expectedYear = "19";
 
     assert.equal(timestamp('YY', date), expectedYear);
     assert.equal(timestampUTC('YY', date), expectedYear);

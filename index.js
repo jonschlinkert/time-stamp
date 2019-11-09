@@ -7,13 +7,13 @@
 
 'use strict';
 
-var dateRegex = /(?=(YYYY|YY|MM|DD|HH|mm|ss|ms))\1([:\/]*)/g;
+var dateRegex = /(?=(YYYY|YY|MM|DD|hh|mm|ss|ms))\1([:\/]*)/g;
 var timespan = {
   YYYY: ['getFullYear', 4],
   YY: ['getFullYear', 2],
   MM: ['getMonth', 2, 1], // getMonth is zero-based, thus the extra increment field
   DD: ['getDate', 2],
-  HH: ['getHours', 2],
+  hh: ['getHours', 2],
   mm: ['getMinutes', 2],
   ss: ['getSeconds', 2],
   ms: ['getMilliseconds', 3]

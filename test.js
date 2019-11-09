@@ -40,8 +40,8 @@ describe('timestamp', function() {
   });
 
   it('should return hours:', function() {
-    assert(/^\d{2}$/.test(timestamp('HH')));
-    assert(/^\d{2}$/.test(timestampUTC('HH')));
+    assert(/^\d{2}$/.test(timestamp('hh')));
+    assert(/^\d{2}$/.test(timestampUTC('hh')));
   });
 
   it('should return minutes:', function() {

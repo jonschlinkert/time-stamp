@@ -68,4 +68,13 @@ describe('timestamp', function() {
     var expected = String(new Date().getUTCFullYear());
     assert.equal(timestamp('YYYY'), pad(expected, 4, '0'));
   });
+
+  it('should return the 2 digit year for a given date', function() {
+    var date = new Date(2019, 0);
+    var expectedYear = "19";
+
+    assert.equal(timestamp('YY', date), expectedYear);
+    assert.equal(timestampUTC('YY', date), expectedYear);
+  });
+
 });

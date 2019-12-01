@@ -135,7 +135,7 @@ console.log(timestamp.utc('ms'));
 
 **Breaking changes**
 
-Default pattern was changed from `YYYY:MM:DD` to `YYYY-MM-DD`. See [issues/3](../../issues) for more details.
+Default pattern was changed from `YYYY:MM:DD` to `YYYY-MM-DD`. See [issues/3](../../issues/3) for more details.
 
 ## About
 

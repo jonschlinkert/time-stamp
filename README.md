@@ -33,6 +33,20 @@ console.log(timestamp.utc());
 //=> 2018-10-26
 ```
 
+or in typescript:
+
+```ts
+import * as timestamp from 'time-stamp';
+// or if "esModuleInterop": true in tsconfig.json:
+// import timestamp from 'time-stamp'
+
+console.log(timestamp());
+//=> 2018-10-26
+
+console.log(timestamp.utc());
+//=> 2018-10-26
+```
+
 ## Customizing the timestamp
 
 You may also pass a string to format the generated timestamp.

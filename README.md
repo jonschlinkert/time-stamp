@@ -33,6 +33,18 @@ console.log(timestamp.utc());
 //=> 2018-10-26
 ```
 
+or in typescript:
+
+```ts
+import timestamp = require('time-stamp');
+
+console.log(timestamp());
+//=> 2018-10-26
+
+console.log(timestamp.utc());
+//=> 2018-10-26
+```
+
 ## Customizing the timestamp
 
 You may also pass a string to format the generated timestamp.

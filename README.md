@@ -36,9 +36,7 @@ console.log(timestamp.utc());
 or in typescript:
 
 ```ts
-import * as timestamp from 'time-stamp';
-// or if "esModuleInterop": true in tsconfig.json:
-// import timestamp from 'time-stamp'
+import timestamp = require('time-stamp');
 
 console.log(timestamp());
 //=> 2018-10-26

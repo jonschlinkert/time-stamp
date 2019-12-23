@@ -75,9 +75,10 @@ describe('timestamp', function() {
   it('should return the 2 digit year for a given date', function() {
     var date = new Date(2019, 0);
     var expectedYear = "19";
+    var expectedYearUTC = String(date.getUTCFullYear()).substr(2);
 
     assert.equal(timestamp('YY', date), expectedYear);
-    assert.equal(timestampUTC('YY', date), expectedYear);
+    assert.equal(timestampUTC('YY', date), expectedYearUTC);
   });
 
   it('should use GMT +2 for the given date', function () {

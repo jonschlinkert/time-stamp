@@ -7,7 +7,7 @@
 
 'use strict';
 
-var dateRegex = /(?=(YYYY|YY|MM|DD|HH|mm|ss|ms))\1([:\/]*)/g;
+var dateRegex = /(?=(YYYY|YY|MM|DD|HH|mm|ss|ms))\1([:/]*)/g;
 var timezoneHoursShift = 0;
 var timespan = {
   YYYY: ['getFullYear', 4],
@@ -50,7 +50,7 @@ timestamp.utc = function(str, date) {
   return timestamp(str, date, true);
 };
 
-timestamp.setTimeZone = function (hourDifference) {
+timestamp.setTimeZone = function(hourDifference) {
   timezoneHoursShift = hourDifference;
 };
 

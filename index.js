@@ -8,6 +8,7 @@
 'use strict';
 
 var dateRegex = /(?=(YYYY|YY|MM|DD|HH|mm|ss|ms))\1([:\/]*)/g;
+var timezoneHoursShift = 0;
 var timespan = {
   YYYY: ['getFullYear', 4],
   YY: ['getFullYear', 2],
@@ -26,6 +27,15 @@ var timestamp = function(str, date, utc) {
   }
 
   if (!date) date = new Date();
+  if (timezoneHoursShift !== 0) {
+    var tempDate = new Date(date);
+    if (!utc) {
+      tempDate.setHours(tempDate.getUTCHours() + timezoneHoursShift);
+    } else {
+      tempDate.setHours(tempDate.getUTCHours() + timezoneHoursShift - date.getTimezoneOffset() / 60);
+    }
+    date = tempDate;
+  }
   return str.replace(dateRegex, function(match, key, rest) {
     var args = timespan[key];
     var name = args[0];
@@ -38,6 +48,10 @@ var timestamp = function(str, date, utc) {
 
 timestamp.utc = function(str, date) {
   return timestamp(str, date, true);
+};
+
+timestamp.setTimeZone = function (hourDifference) {
+  timezoneHoursShift = hourDifference;
 };
 
 module.exports = timestamp;

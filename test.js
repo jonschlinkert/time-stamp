@@ -5,6 +5,9 @@ var assert = require('assert');
 var pad = require('pad-left');
 var timestamp = require('./');
 var timestampUTC = require('./').utc;
+var safeHour = function (hour) {
+    return (24 + hour) % 24;
+};
 
 describe('timestamp', function() {
   it('should return the default timestamp:', function() {
@@ -77,4 +80,50 @@ describe('timestamp', function() {
     assert.equal(timestampUTC('YY', date), expectedYear);
   });
 
+  it('should use GMT +2 for the given date', function () {
+    var date = new Date("2019-01-01T00:00:00");
+    var timezoneHoursShift = 2;
+    var expectedHours = timezoneHoursShift + date.getTimezoneOffset() / 60;
+    var expectedHoursUTC = timezoneHoursShift + date.getUTCHours();
+    expectedHours = safeHour(expectedHours);
+    expectedHoursUTC = safeHour(expectedHoursUTC);
+    timestamp.setTimeZone(timezoneHoursShift);
+    assert.equal(timestamp('HH', date), pad(expectedHours, 2, '0'));
+    assert.equal(timestampUTC('HH', date), pad(expectedHoursUTC, 2, '0'));
+  });
+
+  it('should use GMT -2 for the given date', function () {
+    var date = new Date("2019-01-01T00:00:00");
+    var timezoneHoursShift = -2;
+    var expectedHours = timezoneHoursShift + date.getTimezoneOffset() / 60;
+    var expectedHoursUTC = timezoneHoursShift + date.getUTCHours();
+    expectedHours = safeHour(expectedHours);
+    expectedHoursUTC = safeHour(expectedHoursUTC);
+    timestamp.setTimeZone(timezoneHoursShift);
+    assert.equal(timestamp('HH', date), pad(expectedHours, 2, '0'));
+    assert.equal(timestampUTC('HH', date), pad(expectedHoursUTC, 2, '0'));
+  });
+
+  it('should use GMT +2 for the current date', function () {
+    var date = new Date();
+    var timezoneHoursShift = 2;
+    var expectedHours = timezoneHoursShift + date.getTimezoneOffset() / 60 + date.getHours();
+    var expectedHoursUTC = date.getUTCHours() + timezoneHoursShift;
+    expectedHours = safeHour(expectedHours);
+    expectedHoursUTC = safeHour(expectedHoursUTC);
+    timestamp.setTimeZone(timezoneHoursShift);
+    assert.equal(timestamp('HH', date), pad(expectedHours, 2, '0'));
+    assert.equal(timestampUTC('HH', date), pad(expectedHoursUTC, 2, '0'));
+  });
+
+  it('should use GMT -2 for the current date', function () {
+    var date = new Date();
+    var timezoneHoursShift = -2;
+    var expectedHours = timezoneHoursShift + date.getTimezoneOffset() / 60 + date.getHours();
+    var expectedHoursUTC = date.getUTCHours() + timezoneHoursShift;
+    expectedHours = safeHour(expectedHours);
+    timestamp.setTimeZone(timezoneHoursShift);
+    assert.equal(timestamp('HH', date), pad(expectedHours, 2, '0'));
+    assert.equal(timestampUTC('HH', date), pad(expectedHoursUTC, 2, '0'));
+  });
 });

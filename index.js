@@ -41,3 +41,4 @@ timestamp.utc = function(str, date) {
 };
 
 module.exports = timestamp;
+module.exports.default = timestamp;
